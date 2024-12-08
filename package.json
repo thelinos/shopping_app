@@ -1,0 +1,18 @@
+{
+  "name": "shopping-app-common-files",
+  "version": "1.0.0",
+  "description": "Some common files for the project",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "common"
+  },
+  "keywords": [
+    "common"
+  ],
+  "author": "Kennedy Lino Gyimah",
+  "license": "ISC"
+}
