@@ -1,18 +1,38 @@
 {
-  "name": "shopping-app-common-files",
+  "name": "shopping-app-files",
   "version": "1.0.0",
   "description": "Some common files for the project",
-  "main": "index.js",
-  "scripts": {
-    "test": "npm test"
-  },
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
   "repository": {
     "type": "git",
     "url": "common"
+  },
+  "scripts": {
+    "clean": "del ./build/*",
+    "build": "npm run clean && tsc",
+    "pub": "git add . && git commit -m \"refactor: Updated some code\" &&  npm version patch && npm run build && npm publish"
   },
   "keywords": [
     "common"
   ],
   "author": "Kennedy Lino Gyimah",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "@types/express-validator": "^2.20.33",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/multer": "^1.4.12",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.8.4",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "del-cli": "^6.0.0"
+  }
 }
